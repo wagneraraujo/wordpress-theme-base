@@ -66,6 +66,22 @@ function wordpressify_widgets()
 
 add_action('widgets_init', 'wordpressify_widgets');
 
+
+//remover sidebar
+remove_action("woocommerce_sidebar", "woocommerce_get_sidebar");
+
+//add class no woo
+function add_container_row_classes(){
+  echo "<div class='container'>";
+}
+add_action("woocommerce_before_main_content", "add_container_row_classes", 5);
+
+
+function close_container_row(){
+  echo "</div>";
+}
+add_action("woocommerce_after_main_content", "close_container_row", 5);
+
 //menu
 function simple_menu_config()
 {
