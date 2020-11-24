@@ -115,3 +115,7 @@ function simple_class_add_archor($classes, $item, $args)
   return $classes;
 }
 add_action("nav_menu_link_attributes", "simple_class_add_archor", 1, 3);
+
+/* include_once '' */
+remove_action("woocommerce_before_shop_loop", "woocommerce_catalog_ordering", 30);
+

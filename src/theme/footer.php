@@ -2,10 +2,10 @@
 	<div class="footer-inner">
 		<div class="text-row">
 			<p>
-				<?php bloginfo( 'name' ); ?>
+				<?php bloginfo('name'); ?>
 			</p>
 			<p>
-				Copyright <?php echo date( 'Y' ); ?> &copy; All rights reserved
+				Copyright <?php echo date('Y'); ?> &copy; All rights reserved
 			</p>
 		</div>
 	</div>
