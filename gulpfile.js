@@ -129,12 +129,13 @@ function devServer() {
   );
 
   watch("./src/assets/css/**/*.css", stylesDev);
+  watch("./src/assets/sass/**/*.scss", stylesDev);
   watch("./src/theme/woocommerce/**/*.php", stylesDev);
   watch("./src/assets/js/**", series(footerScriptsDev, Reload));
   watch("./src/assets/img/**", series(copyImagesDev, Reload));
   watch("./src/assets/fonts/**", series(copyFontsDev, Reload));
   watch("./src/theme/**", series(copyThemeDev, Reload));
-  watch("./src/plugins/**", series(pluginsDev, Reload));
+  //watch("./src/plugins/**", series(pluginsDev, Reload));
   watch(
     "./build/wordpress/wp-config.php",
     { events: "add" },

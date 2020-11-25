@@ -1,0 +1,106 @@
+// Mixins
+@mixin transform($value) {
+  -webkit-transform: translate3d(0, 0, 0) $value;
+  -moz-transform: translate3d(0, 0, 0) $value;
+  -ms-transform: translate3d(0, 0, 0) $value;
+  transform: translate3d(0, 0, 0) $value;
+}
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}
+
+.toggle-menu {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2;
+  top: 0px;
+}
+
+@include for-tablet-landscape-up() {
+  .menuhamburger {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .menu_site {
+    display: none;
+  }
+}
+#menumobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 220px;
+  height: 100%;
+  padding-top: 60px;
+  background: $gray_hover;
+
+  .toggle-menu {
+    z-index: 3;
+  }
+  ul {
+    padding: 0px;
+    list-style: none;
+    margin-top: 20px;
+
+    li {
+      margin-bottom: 5px;
+      a {
+        color: $fonte;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1px;
+        &:hover {
+          color: $primary_hover;
+        }
+      }
+    }
+  }
+  .logosite_menu_mob {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      position: relative;
+      top: 10px;
+      left: 10px;
+      width: 80%;
+    }
+  }
+  .toggle-menu-close {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+  }
+}
+
+.lnk-menu {
+  display: block;
+  margin: 0 10px;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    color: #399;
+  }
+}
+
+#menumobile {
+  @include transform(translateX(-220px));
+  @include transition(all 0.25s cubic-bezier(0.16, 0.63, 0.45, 0.98));
+}
+
+#menumobile:target {
+  @include transform(translateX(0));
+}

@@ -1,4 +1,87 @@
-header {
-  background-color: #ccc;
-  height: 50px;
+.allMenu {
+  @include min-for-desktop-up() {
+    padding: 36px 0px;
+  }
+}
+
+.menuDark {
+  background-color: $primary;
+}
+.menuTransparent {
+  background-color: none;
+}
+.logosite {
+  position: relative;
+  top: -2px;
+  left: 10px;
+  @include max-for-desktop-up() {
+    left: 0px;
+  }
+}
+.line_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .menuhamburger,
+  .cart_icon {
+    padding: 10px 25px 10px 15px;
+  }
+
+  .qtd_cart {
+    position: absolute;
+    font-size: 12px;
+    background-color: $secondary;
+    height: 15px;
+    display: flex;
+    margin-top: -5px;
+    margin-left: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    width: 15px;
+    border-radius: 100px;
+  }
+}
+
+.menu_site {
+  display: flex;
+  ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    @include min-for-desktop-up() {
+      position: relative;
+      top: 10px;
+    }
+  }
+  li {
+    margin: 0 5px;
+    a {
+      padding: 0px;
+      letter-spacing: 1px;
+      font-weight: 300;
+      size: 13px;
+      @include transicao;
+
+      @include max-for-desktop-up() {
+        font-size: 11px;
+        font-weight: 600;
+        margin-top: 15px;
+      }
+    }
+  }
+  .menu_dark {
+    li {
+      a {
+        color: #fff;
+        @include transicao;
+        &:hover {
+          @include transicao;
+          color: #fff963;
+        }
+      }
+    }
+  }
 }
