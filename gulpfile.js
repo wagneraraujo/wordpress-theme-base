@@ -361,7 +361,7 @@ exports.backup = series(Backup);
 /* -------------------------------------------------------------------------------------------------
 Messages
 -------------------------------------------------------------------------------------------------- */
-const date = new Date().toLocaleDateString("en-GB").replace(/\//g, ".");
+const date = new Date().toLocaleDateString("pt-BR").replace(/\//g, ".");
 const errorMsg = "\x1b[41mError\x1b[0m";
 const warning = "\x1b[43mWarning\x1b[0m";
 const devServerReady =

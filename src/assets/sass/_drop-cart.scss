@@ -1,0 +1,130 @@
+.lighter-text {
+  color: #151515;
+}
+.main-color-text {
+  color: $primary;
+}
+.badge {
+  background-color: $secondary;
+  border-radius: 100px;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 7px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.shopping-cart {
+  background: white;
+  width: 90%;
+  @include shadow1;
+  position:absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index:99;
+
+  @include for-tablet-landscape-up(){
+    width:300px;
+    margin: 60px 10px 0 0px ;
+  }
+
+  @include min-for-desktop-up(){
+    width:360px;
+      top: 0%;
+    left: 50%;
+    transform: translate(59%, 15%);
+  }
+
+  .shopping-cart-header {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 12px;
+    .shopping-cart-total {
+      float: right;
+    }
+  }
+  .shopping-cart-items {
+    padding-top: 20px;
+    list-style: none;
+    padding:0px;
+    li {
+      margin-bottom: 12px;
+    }
+    img {
+      float: left;
+      margin-right: 6px;
+      width:50px;
+      height: auto;
+    }
+    .item-name {
+      display: block;
+      padding-top: 10px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .item-price {
+      color: $primary;
+      margin-right: 8px;
+    }
+
+    .item-quantity {
+        color: $gray;
+        font-size: 13px;
+    }
+  }
+}
+
+.shopping-cart:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.cart-icon {
+  color: #515783;
+  font-size: 24px;
+  margin-right: 7px;
+  float: left;
+}
+
+.button {
+  background: $primary;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 25px 0 15px 0;
+
+  &:hover {
+    background: $primary_hover;
+    text-decoration: none;;
+    color:$fonte;
+  }
+}
+.button_inline{
+  @include buttonDefault(none, #fff, $primary, #191919);
+  border:1px solid $primary;
+  box-shadow: none;
+  padding:6px 12px;
+  display: block;
+  &:hover{
+    background:$primary_hover;
+  }
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -36,3 +36,30 @@
 @mixin transicao {
   transition: background-color 0.4s ease-out;
 }
+@mixin shadow1 {
+      -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+
+
+    @mixin buttonDefault($background, $background_hover, $colorText, $colorText_hover){
+      color: $colorText;
+      display: inline-block;
+      text-align: center;
+      margin-top: 16px;
+      background: $background;
+      padding: 12px 22px;
+      transform: uppercase;
+      @include transicao;
+      @include shadow1;
+
+      &:hover {
+        @include transicao;
+        text-decoration: none;
+        color: $colorText_hover;
+        background-color: $background_hover;
+        box-shadow: none;
+      }
+
+    }

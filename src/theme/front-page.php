@@ -1,6 +1,7 @@
 
 <?php get_header(); ?>
 <?php get_template_part('inc/menu-home'); ?>
+<?php get_template_part('inc/slide'); ?>
 <!-- container -->
 <div class="container">	
 	<!-- site-content -->
@@ -24,7 +25,6 @@
 		</article>
 	</div>
 	<!-- /site-content -->
-
 	<?php get_sidebar(); ?>
 </div>
 <!-- /container -->
