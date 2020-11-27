@@ -24,7 +24,7 @@
 </nav>
 </div>  
     <div class="cart_icon"> 
-<a href="#" id="cart">
+      <a href="#" id="cart">
     <div class="qtd_cart">
 <?php
 global $woocommerce;
@@ -38,6 +38,3 @@ echo $woocommerce->cart->cart_contents_count;
 </div>
 </div>
 </div>
-
-
-
