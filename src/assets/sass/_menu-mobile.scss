@@ -40,7 +40,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   width: 220px;
   height: 100%;
   padding-top: 60px;
@@ -82,6 +82,7 @@
     position: fixed;
     right: 5px;
     top: 5px;
+    z-index: 4;
   }
 }
 
@@ -103,4 +104,17 @@
 
 #menumobile:target {
   @include transform(translateX(0));
+}
+.socialista_menu_mobile {
+  list-style: none;
+
+  padding: 10px;
+  display: flex;
+  img {
+    width: 25px;
+  }
+
+  li {
+    margin: 0 0 0 25px;
+  }
 }

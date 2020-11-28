@@ -1,11 +1,14 @@
 .allMenu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 6px 0px;
   @include min-for-desktop-up() {
     padding: 36px 0px;
   }
 }
-
 .menuDark {
-  background-color: $primary;
+  background-color: transparent;
 }
 .menuTransparent {
   background-color: none;
@@ -13,20 +16,48 @@
 .logosite {
   position: relative;
   top: -2px;
-  left: 10px;
+  left: 15px;
   @include max-for-desktop-up() {
     left: 0px;
   }
 }
+
 .line_menu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   .menuhamburger,
   .cart_icon {
     padding: 10px 25px 10px 15px;
-  }
+    .socialista {
+      padding: 0px;
+      list-style: none;
+      position: absolute;
+      display: block;
+      margin-left: -90px;
+      img {
+        width: 20px;
+        height: auto;
+      }
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 0px 5px 0px 5px;
+        @include shadow1;
+        @include transicao;
+        border-radius: 100px;
+        &:hover {
+          position: relative;
+          top: -3px;
+          @include shadow1;
+          @include transicao;
+        }
+      }
 
+      @include max-for-desktop-up() {
+        display: none;
+      }
+    }
+  }
   .qtd_cart {
     position: absolute;
     font-size: 12px;
@@ -43,9 +74,9 @@
     border-radius: 100px;
   }
 }
-
 .menu_site {
   display: flex;
+  justify-content: space-between;
   ul {
     padding: 0px;
     list-style: none;
@@ -64,7 +95,6 @@
       font-weight: 300;
       size: 13px;
       @include transicao;
-
       @include max-for-desktop-up() {
         font-size: 11px;
         font-weight: 600;
@@ -84,4 +114,7 @@
       }
     }
   }
+}
+.allMenu {
+  position: absolute;
 }

@@ -24,7 +24,9 @@ defined( 'ABSPATH' ) || exit;
 <?php if ( ! WC()->cart->is_empty() ) : ?>
     <div class="">
       <div class="shopping-cart-total">
-          <a href="#" id="closecart" class="closecart">x</a>
+          <a href="#" id="closecart" class="closecart">
+x
+</a>
       </div>
     </div> <!--end shopping-cart-header -->
 

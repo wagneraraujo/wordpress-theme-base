@@ -1,7 +1,7 @@
 <div class="allMenu menuDark">
 <div class="container">
-  <div class="row line_menu">
 <?php get_template_part('inc/drop-cart'); ?>
+  <div class="row line_menu">
     <div class="menuhamburger">
       <a href="#menumobile" class="toggle-menu" aria-role="button" >
         <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-text-left" fill="#fff" xmlns="http://www.w3.org/2000/svg">
@@ -24,6 +24,25 @@
 </nav>
 </div>  
     <div class="cart_icon"> 
+      <ul class="socialista">
+  <li><a href="https://www.facebook.com/selectnutri" target="_Blank">
+      <img src="<?php echo esc_url(
+        get_template_directory_uri()
+      ); ?>/images/icons/instagram.svg" alt="Siga a Select Nutri no Instagram">
+       </a></li>
+  <li><a href="https://www.instagram.com/selectnutrioficial/" target="_Blank">
+
+      <img src="<?php echo esc_url(
+        get_template_directory_uri()
+      ); ?>/images/icons/facebook.svg" alt="Curta a Select no Facebook">
+</a></li>
+  <li><a href="https://www.youtube.com/channel/UCow42qPrQXZNi2yvzVEO-3g/" target="_Blank">
+
+      <img src="<?php echo esc_url(
+        get_template_directory_uri()
+      ); ?>/images/icons/youtube.svg" alt="Faça sua inscrição no Canal da Select Nutri">
+</a></li>
+</ul>
       <a href="#" id="cart">
     <div class="qtd_cart">
 <?php

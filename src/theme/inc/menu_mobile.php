@@ -16,4 +16,26 @@
     "container" => false,
     'items_wrap' => '<ul id="%1$s">%3$s</ul>'
   )); ?>
+
+<br>
+
+      <ul class="socialista_menu_mobile">
+  <li><a href="https://www.facebook.com/selectnutri" target="_Blank">
+      <img src="<?php echo esc_url(
+        get_template_directory_uri()
+      ); ?>/images/icons/instagram.svg" alt="Siga a Select Nutri no Instagram">
+       </a></li>
+  <li><a href="https://www.instagram.com/selectnutrioficial/" target="_Blank">
+
+      <img src="<?php echo esc_url(
+        get_template_directory_uri()
+      ); ?>/images/icons/facebook.svg" alt="Curta a Select no Facebook">
+</a></li>
+  <li><a href="https://www.youtube.com/channel/UCow42qPrQXZNi2yvzVEO-3g/" target="_Blank">
+
+      <img src="<?php echo esc_url(
+        get_template_directory_uri()
+      ); ?>/images/icons/youtube.svg" alt="Faça sua inscrição no Canal da Select Nutri">
+</a></li>
+</ul>
 </nav>
