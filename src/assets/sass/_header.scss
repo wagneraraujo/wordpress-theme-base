@@ -15,7 +15,7 @@
 }
 .logosite {
   position: relative;
-  top: -2px;
+  top: 5px;
   left: 15px;
   @include max-for-desktop-up() {
     left: 0px;
@@ -117,4 +117,5 @@
 }
 .allMenu {
   position: absolute;
+  z-index: 9;
 }

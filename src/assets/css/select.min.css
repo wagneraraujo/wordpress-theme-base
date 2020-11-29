@@ -15,7 +15,7 @@
 
 .logosite {
   position: relative;
-  top: -2px;
+  top: 5px;
   left: 15px; }
   @media (max-width: 1200px) {
     .logosite {
@@ -33,7 +33,7 @@
       list-style: none;
       position: absolute;
       display: block;
-      margin-left: -110px;
+      margin-left: -90px;
       display: flex;
       justify-content: center; }
       .line_menu .menuhamburger .socialista img,
@@ -108,7 +108,8 @@
       color: #fff963; }
 
 .allMenu {
-  position: absolute; }
+  position: absolute;
+  z-index: 9; }
 
 .toggle-menu {
   width: 30px;
@@ -357,28 +358,31 @@
   .closecart:hover {
     text-decoration: none; }
 
-.slide_select {
-  height: 360px;
+.swiper-slide {
+  height: 420px;
   width: 100%;
-  padding: 90px 0px 30px 0px;
+  margin: 0px !important;
+  padding: 80px 0 20px 0;
   background-size: cover !important;
   background-repeat: no-repeat;
-  background-position: center center !important; }
-  .slide_select .textoSlide {
+  background-position: center center !important;
+  position: relative;
+  z-index: 1 !important; }
+  .swiper-slide .textoSlide {
     color: #fff;
     text-align: left; }
-    .slide_select .textoSlide h1,
-    .slide_select .textoSlide h2,
-    .slide_select .textoSlide h3,
-    .slide_select .textoSlide h4 {
+    .swiper-slide .textoSlide h1,
+    .swiper-slide .textoSlide h2,
+    .swiper-slide .textoSlide h3,
+    .swiper-slide .textoSlide h4 {
       text-transform: uppercase;
       letter-spacing: 2px; }
-    .slide_select .textoSlide p {
+    .swiper-slide .textoSlide p {
       font-size: 17px;
       letter-spacing: 0px;
       font-weight: 400;
       margin-top: 16px; }
-    .slide_select .textoSlide a {
+    .swiper-slide .textoSlide a {
       color: #fff;
       display: inline-block;
       border: 1px solid rgba(70, 244, 64, 0.5);
@@ -391,29 +395,29 @@
       -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
       box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3); }
-      .slide_select .textoSlide a:hover {
+      .swiper-slide .textoSlide a:hover {
         transition: background-color 0.4s ease-out;
         text-decoration: none;
         color: #3f3f3f;
         background-color: #46f440;
         box-shadow: none; }
   @media (min-width: 600px) {
-    .slide_select {
+    .swiper-slide {
       height: 480px;
       padding: 120px 0px 30px 0px; } }
   @media (min-width: 1200px) {
-    .slide_select {
+    .swiper-slide {
       height: 580px;
       padding: 200px 0px 0px 0px; }
-      .slide_select h2 {
+      .swiper-slide h2 {
         font-size: 52px;
         font-weight: 300; }
-      .slide_select p {
+      .swiper-slide p {
         font-size: 18px;
         letter-spacing: 0px;
         font-weight: 300;
         margin-top: 16px; }
-      .slide_select a {
+      .swiper-slide a {
         color: #fff;
         display: inline-block;
         border: 1px solid rgba(70, 244, 64, 0.5);
@@ -426,9 +430,19 @@
         -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3); }
-        .slide_select a:hover {
+        .swiper-slide a:hover {
           transition: background-color 0.4s ease-out;
           text-decoration: none;
           color: #3f3f3f;
           background-color: #46f440;
           box-shadow: none; } }
+
+.swiper-container {
+  position: relative !important;
+  z-index: 1 !important; }
+
+@media (max-width: 760px) {
+  .swiper-button-prev {
+    display: none; }
+  .swiper-button-next {
+    display: none; } }
