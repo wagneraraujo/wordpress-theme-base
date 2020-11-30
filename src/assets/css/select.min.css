@@ -135,7 +135,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 99 !important;
   width: 220px;
   height: 100%;
   padding-top: 60px;
@@ -441,8 +441,23 @@
   position: relative !important;
   z-index: 1 !important; }
 
+.swiper-button-prev {
+  color: #fff !important;
+  outline: none !important; }
+  .swiper-button-prev:hover {
+    color: #022e8e !important; }
+
+.swiper-button-next {
+  color: #fff !important;
+  outline: none !important; }
+  .swiper-button-next:hover {
+    color: #022e8e !important; }
+
 @media (max-width: 760px) {
   .swiper-button-prev {
     display: none; }
   .swiper-button-next {
     display: none; } }
+
+.swiper-pagination {
+  display: none; }

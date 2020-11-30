@@ -119,3 +119,36 @@ add_action("nav_menu_link_attributes", "simple_class_add_archor", 1, 3);
 /* include_once '' */
 remove_action("woocommerce_before_shop_loop", "woocommerce_catalog_ordering", 30);
 
+/* function webapptiv_remove_block_library_css() */
+/* { */
+/* wp_dequeue_style( 'wp-block-library' ); } */
+/* add_action( 'wp_enqueue_scripts', 'webapptiv_remove_block_library_css' ); */
+
+
+
+add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
+function my_deregister_javascript() {
+   if ( !is_page('contato') ) {
+    wp_deregister_script( 'contact-form-7' );
+     }
+}
+
+//Remove Gutenberg Block Library CSS from loading on the frontend
+function smartwp_remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+}
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+
+/* add_action( 'wp_head', 'se343581_add_preload_tag', 5); */
+/* function se343581_add_preload_tag() */
+/* { */
+/*     echo '<link rel="preload" href="'. */ 
+/*         plugins_url('/wp-content/plugins/woocommerce/assets/css/woocommerce.css') . */
+/*          '" as="style">'; */
+/*     // */
+/*     // -- if added in plugin file -- */
+/*     // echo '<link rel="preload" href="' . plugin_dir_url( __FILE__ ) . 'some_subdir/file_name.css" as="style">'; */
+/* } */
+

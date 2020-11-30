@@ -5,13 +5,13 @@
 				<?php bloginfo('name'); ?>
 			</p>
 			<p>
-				Copyright <?php echo date('Y'); ?> &copy; All rights reserved
+				&copy; Copyright <?php echo date('Y'); ?> Todos os direitos Reservados.
 			</p>
 		</div>
 	</div>
 </footer>
 <?php wp_footer(); ?>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha512-VHsNaV1C4XbgKSc2O0rZDmkUOhMKPg/rIi8abX9qTaVDzVJnrDGHFnLnCnuPmZ3cNi1nQJm+fzJtBbZU9yRCww==" crossorigin="anonymous"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
       pagination: {
