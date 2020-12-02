@@ -43,6 +43,9 @@ switch ( $template ) {
 	case 'twentysixteen':
 		echo '<div id="primary" class="content-area twentysixteen"><main id="main" class="site-main" role="main">';
 		break;
+	case 'selectheme':
+		echo '<div id="container" class="container"><div id="main" class="row" role="main">';
+		break;
 	default:
 		echo '<div id="primary" class="content-area"><main id="main" class="site-main" role="main">';
 		break;

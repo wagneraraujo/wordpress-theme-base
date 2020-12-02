@@ -39,6 +39,7 @@ function wordpressify_setup()
   add_image_size('small-thumbnail', 720, 720, true);
   add_image_size('square-thumbnail', 80, 80, true);
   add_image_size('banner-image', 1024, 1024, true);
+  add_image_size('slide-image', 2560, 700, true);
 }
 
 add_action('after_setup_theme', 'wordpressify_setup');
@@ -72,13 +73,13 @@ remove_action("woocommerce_sidebar", "woocommerce_get_sidebar");
 
 //add class no woo
 function add_container_row_classes(){
-  echo "<div class='container'>";
+  echo "<div class='container'><div class='row'>";
 }
 add_action("woocommerce_before_main_content", "add_container_row_classes", 5);
 
-
+//close container and row
 function close_container_row(){
-  echo "</div>";
+  echo "</div></div>";
 }
 add_action("woocommerce_after_main_content", "close_container_row", 5);
 
@@ -93,9 +94,13 @@ function simple_menu_config()
   //theme support
   add_theme_support("post-thumbnails");
   add_theme_support("woocommerce", array(
-    "thumbnail_image_width" => 150,
+    "thumbnail_image_width" => 250,
     "single_image_width" => 200,
-    "product_grid" => array()
+    "product_grid" => array(
+      "default_columns" => 12,
+      "min_columns" => 2,
+      "max_columns" => 4,
+    )
   ));
 }
 add_action("after_setup_theme", "simple_menu_config");
@@ -124,8 +129,6 @@ remove_action("woocommerce_before_shop_loop", "woocommerce_catalog_ordering", 30
 /* wp_dequeue_style( 'wp-block-library' ); } */
 /* add_action( 'wp_enqueue_scripts', 'webapptiv_remove_block_library_css' ); */
 
-
-
 add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
 function my_deregister_javascript() {
    if ( !is_page('contato') ) {
@@ -141,14 +144,4 @@ function smartwp_remove_wp_block_library_css(){
 }
 add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
-/* add_action( 'wp_head', 'se343581_add_preload_tag', 5); */
-/* function se343581_add_preload_tag() */
-/* { */
-/*     echo '<link rel="preload" href="'. */ 
-/*         plugins_url('/wp-content/plugins/woocommerce/assets/css/woocommerce.css') . */
-/*          '" as="style">'; */
-/*     // */
-/*     // -- if added in plugin file -- */
-/*     // echo '<link rel="preload" href="' . plugin_dir_url( __FILE__ ) . 'some_subdir/file_name.css" as="style">'; */
-/* } */
-
+include_once 'mod/modifications.php';
