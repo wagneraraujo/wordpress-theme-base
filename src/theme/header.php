@@ -19,5 +19,9 @@
 
 <body <?php body_class(); ?>>
 <?php get_template_part('inc/menu_mobile'); ?>
-<header id="header" class="container header">
-</header>
+<?php 
+if ( is_page( array( 'inicio', 'sobre-nos' ) ) ) {
+} else {
+ get_template_part('inc/menu-pages'); 
+}
+?>

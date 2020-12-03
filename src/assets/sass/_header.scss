@@ -33,7 +33,7 @@
       list-style: none;
       position: absolute;
       display: block;
-      margin-left: -90px;
+      margin-left: -105px;
       img {
         width: 20px;
         height: auto;
@@ -42,7 +42,6 @@
       justify-content: center;
       li {
         margin: 0px 5px 0px 5px;
-        @include shadow1;
         @include transicao;
         border-radius: 100px;
         &:hover {
@@ -118,4 +117,58 @@
 .allMenu {
   position: absolute;
   z-index: 9;
+}
+.stickyHome {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $primary;
+  padding: 15px 0px !important;
+  @include shadow2;
+}
+.stickyPages {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-bottom: 1px solid rgba($gray, 0.1);
+  padding: 15px 0px !important;
+  @include shadow2;
+}
+.menu_white {
+  padding: 5px 0px;
+  li {
+    a {
+      color: #191919 !important;
+      @include transicao;
+      &:hover {
+        @include transicao;
+        color: $primary_hover !important;
+      }
+    }
+  }
+}
+.headerpages {
+  padding: 6px 0px 80px 0px;
+  background-color: #fff;
+  margin-bottom: 80px;
+  height: 80px;
+}
+
+.logowhite {
+  img {
+    max-width: 150px;
+    height: auto;
+  }
 }

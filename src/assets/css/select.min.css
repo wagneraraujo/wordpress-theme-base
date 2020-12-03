@@ -33,7 +33,7 @@
       list-style: none;
       position: absolute;
       display: block;
-      margin-left: -90px;
+      margin-left: -105px;
       display: flex;
       justify-content: center; }
       .line_menu .menuhamburger .socialista img,
@@ -43,9 +43,6 @@
       .line_menu .menuhamburger .socialista li,
       .line_menu .cart_icon .socialista li {
         margin: 0px 5px 0px 5px;
-        -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
-        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
         transition: background-color 0.4s ease-out;
         border-radius: 100px; }
         .line_menu .menuhamburger .socialista li:hover,
@@ -110,6 +107,51 @@
 .allMenu {
   position: absolute;
   z-index: 9; }
+
+.stickyHome {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2fc72a;
+  padding: 15px 0px !important;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1); }
+
+.stickyPages {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ece9e6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ffffff, #ece9e6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffffff, #ece9e6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  padding: 15px 0px !important;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1); }
+
+.menu_white {
+  padding: 5px 0px; }
+  .menu_white li a {
+    color: #191919 !important;
+    transition: background-color 0.4s ease-out; }
+    .menu_white li a:hover {
+      transition: background-color 0.4s ease-out;
+      color: #46f440 !important; }
+
+.headerpages {
+  padding: 6px 0px 80px 0px;
+  background-color: #fff;
+  margin-bottom: 80px;
+  height: 80px; }
+
+.logowhite img {
+  max-width: 150px;
+  height: auto; }
 
 .toggle-menu {
   width: 30px;
