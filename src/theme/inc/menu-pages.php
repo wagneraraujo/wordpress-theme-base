@@ -1,4 +1,4 @@
-<header class="headerpages"id="menuPagesFixed">
+<header class="headerpages" id="menuPagesFixed">
 <div class="allMenu" >
 <div class="container">
 <?php get_template_part('inc/drop-cart'); ?>
@@ -59,3 +59,12 @@ echo $woocommerce->cart->cart_contents_count;
 </div>
 </div>
 </header>
+<div class="detalheheader">
+  <div class="container">
+<div class="row">
+      
+<h3><?php the_title();?>
+</h3>
+</div>
+</div>
+</div>

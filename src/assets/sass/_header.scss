@@ -4,7 +4,7 @@
   width: 100%;
   padding: 6px 0px;
   @include min-for-desktop-up() {
-    padding: 36px 0px;
+    padding: 26px 0px;
   }
 }
 .menuDark {
@@ -126,10 +126,13 @@
   padding: 15px 0px !important;
   @include shadow2;
 }
+
 .stickyPages {
   position: fixed;
   top: 0;
+  z-index:9;
   width: 100%;
+  margin:0px !important;
   background: #ece9e6; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
@@ -160,15 +163,31 @@
   }
 }
 .headerpages {
-  padding: 6px 0px 80px 0px;
   background-color: #fff;
-  margin-bottom: 80px;
-  height: 80px;
+  height: 60px;
 }
-
+.stickyPages .allMenu{
+    margin-top:-35px
+}
 .logowhite {
   img {
     max-width: 150px;
     height: auto;
   }
+}
+.detalheheader{
+  height: 180px;
+  background: rgb(119,225,27);
+background: linear-gradient(90deg, rgba(119,225,27,1) 0%, rgba(0,184,230,1) 100%);
+margin-top:35px;
+margin-bottom: 30px;
+display: flex;
+align-items: center;
+h3{
+  color:#fff;
+padding:0px 15px;
+}
+}
+.page-title{
+  display: none;
 }
