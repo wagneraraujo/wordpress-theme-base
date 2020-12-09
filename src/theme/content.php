@@ -39,13 +39,13 @@
 		<?php
   if (is_search() or is_archive()): ?>
 			<p class="excerpt content">
-				<a href="<?php the_permalink(); ?>" class="button">Read More</a>
+				<a href="<?php the_permalink(); ?>" class="button">Leia Mais</a>
 			</p>
 		<?php endif;
   if ($post->post_excerpt): ?>
 			<p class="excerpt">
 				<?php echo get_the_excerpt(); ?>
-				<a href="<?php the_permalink(); ?>" class="button">Read More</a>
+				<a href="<?php the_permalink(); ?>" class="button">Leia Mais</a>
 			</p>
 		<?php endif;
   ?>

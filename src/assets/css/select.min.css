@@ -418,6 +418,24 @@
   .closecart:hover {
     text-decoration: none; }
 
+.depreco {
+  color: #FF8D8D;
+  font-size: 14px;
+  font-weight: 400; }
+
+.porpreco {
+  font-weight: 600;
+  font-size: 16px; }
+
+.title_product_list {
+  color: #3F3F3F; }
+
+.item-cart-select {
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
 .swiper-slide {
   height: 420px;
   width: 100%;
