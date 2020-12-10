@@ -5,16 +5,16 @@
 }
 .porpreco {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   color: #3f3f3f;
 }
 .title_product_list {
   color: #3f3f3f;
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 16px;
 }
 .item-cart-select {
-  text-align: center;
+  text-align: center !important;
 }
 .card-item-produtc {
   margin-bottom: 36px;
@@ -32,28 +32,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   a {
     border-radius: 1px;
     margin-bottom: 8px;
-  }
-}
-.titleTop {
-  text-align: center;
-  padding: 36px 0px 0px 0px;
-  text-transform: uppercase;
-  color: $fonte;
-}
-.video_assistir {
-  position: absolute;
-  top: 10px;
-  left: 25px;
-  padding: 4px 12px;
-  display: flex;
-  align-items: center;
-  background: $secondary;
-  border-radius: 4px;
-  a {
-    color: #fff;
-    font-size: 12px;
   }
 }

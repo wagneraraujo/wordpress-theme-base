@@ -10,10 +10,11 @@
       </a>
     </div>
   <div class="logosite">
+<a href="<?php echo get_option('home');?>">
       <img src="<?php echo esc_url(
         get_template_directory_uri()
       ); ?>/images/logo-dark.png" alt="Select Nutri - Viva Mais com a Select Nutri">
-  </div>
+  </a></div>
 <div class="menu_site">
 <nav class="menu_dark">
   <?php wp_nav_menu(array(

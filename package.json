@@ -20,8 +20,8 @@
     "wordpressify",
     "workflow"
   ],
-  "homepage": "https://www.wordpressify.co",
-  "repository": "https://github.com/luangjokaj/wordpressify",
+  "homepage": "https://www.selectnutri.com.br",
+  "repository": "https://github.com/wagneraraujo/wordpress-theme-base",
   "main": "./installer/index.js",
   "bin": {
     "wordpressify": "./installer/index.js"
@@ -36,7 +36,7 @@
     "backup": "gulp backup",
     "lint:css": "stylelint src/**/*.css"
   },
-  "author": "Luan Gjokaj <luan@riangle.com>",
+  "author": "Wagner Araújo <wagneraraujo15@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.12.3",
